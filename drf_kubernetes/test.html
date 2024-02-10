@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Speech to text</title>
+</head>
+<body>
+   <div class="speaker" style="display: flex;justify-content: space-between;width: 13rem;box-shadow: 0 0 13px #0000003d;border-radius: 5px;">
+      <p id="action" style="color: grey;font-weight: 800; padding: 0; padding-left: 2rem;"></p>
+      <button onclick="runSpeechRecognition()" style="border: transparent;padding: 0 0.5rem;">
+         Speech
+      </button>
+   </div>
+   <h3 id="output" class="hide"></h3>
+   <script>
+      function runSpeechRecognition() {
+         document.getElementById("output").innerHTML = "Loading text...";
+         var output = document.getElementById('output');
+         var action = document.getElementById('action');
+
+         if ('SpeechRecognition' in window) {
+            const recognition = new SpeechRecognition();
+            
+            recognition.onstart = () => {
+               action.innerHTML = "Listening...";
+            }
+            
+            recognition.onresult = (e) => {
+               var transcript = e.results[0][0].transcript;
+               output.innerHTML = transcript;
+               output.classList.remove("hide")
+               action.innerHTML = "";
+            }
+            
+            recognition.start();
+         } else {
+            // Handle the case where SpeechRecognition is not available
+            alert('Speech recognition is not supported in this browser.');
+         }
+      }
+   </script>
+</body>
+</html>
