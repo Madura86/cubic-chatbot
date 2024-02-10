@@ -1,0 +1,93 @@
+.voice-chat-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 100px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .button-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .recognition-button {
+    background-color: white;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .recognition-button img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .action-button {
+    background-color: white;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .chat-container {
+    /* margin-bottom: 20px; */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* .user-message {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .bot-message {
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  } */
+  
+  .user-message,
+  .bot-message {
+    max-width: 70%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    clear: both;
+    }
+
+  .user-message {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end;
+    }
+    
+    .bot-message {
+    background-color: #f0f0f0;
+    color: #333;
+    align-self: flex-start;
+    }
+
+  .listening-status {
+    background-color: white;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .listening-status img {
+    width: 50px;
+    height: 50px;
+  }
